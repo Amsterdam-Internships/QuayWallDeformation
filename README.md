@@ -13,7 +13,9 @@ This repository containts code for my master's thesis project. The project aims 
 - LoadTacheometry.ipynb contains the loading functions for the quay wall tacheometry data. The data is stored in different formats in different csv's, because of changing my mind on the format. - TO DO: make sure only one format remains and is adjusted everywhere appropriately.
 - prepare_cpt.ipynb contains functions to preprocess the CPT data. It outputs a preprocessed csv, ready for the training notebook. - TO DO: combine with loadSoil.ipynb for better overview.
 - prepare_tcmt.ipynb contains functions to preprocess the tacheometry data. It outputs a preprocessed csv, ready for the training notebook. - TO DO: combine with LoadTacheometry.ipynb for better overview.
-- Train.ipynb contains functions to train and evaluate the data. It also contains the experiments and their results.
+- Train.ipynb contains functions to train and validate the models. It also contains the experiments and their results.
+- Evaluation.ipynb contains the functions to test the models. It also contains the results.
+- ARK validation contains the code to produce the ARK risk category map.
 
 ## Installation
 
