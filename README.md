@@ -31,6 +31,6 @@ This repository containts code for my master's thesis project. The project aims 
 ## Usage
 
 Explain example usage, possible arguments, etc. E.g.:
-To load the data, run notebooks LoadSoil.ipynb, LoadSatellite.ipynb, and LoadTacheometry.ipynb.
+To load the data, run notebooks LoadSoil.ipynb, Load_satellite.ipynb, and LoadTacheometry.ipynb.
 To preprocess the data, run notebooks prepare_tcmt.ipynb and prepare_cpt.ipynb.
 To train, run notebook Train.ipynb
