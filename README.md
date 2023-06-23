@@ -7,7 +7,7 @@ This repository containts code for my master's thesis project. The project aims 
 ## Project Structure
 
 - EploratoryDataAnalysis.ipynb contains the EDA on all data except for the satellite data.
-- Load_satellite.ipynb contains the loading functions, EDA, and preprocessing for the satellite data. It stores three preprocessed csv for horizontal, vertical and hinterland settlemen in the end.
+- Load_satellite.ipynb contains the loading functions, EDA, and preprocessing for the satellite data. It stores three preprocessed csv for horizontal, vertical and hinterland settlemen in the end. - currently unavailable due to confidential data concerns.
 - LoadMeetbouten.ipynb contains the loading functions and some preprocessing for the building tacheometry data. It yields a preprocessed csv.
 - LoadSoil.ipynb contains the loading functions for the soil data, the data is stored in one csv for CPT data and one for Bore data.
 - LoadTacheometry.ipynb contains the loading functions for the quay wall tacheometry data. The data is stored in different formats in different csv's, because of changing my mind on the format. - TO DO: make sure only one format remains and is adjusted everywhere appropriately.
