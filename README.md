@@ -7,17 +7,22 @@ This repository containts code for my master's thesis project. The project aims 
 ## Project Structure
 
 - EploratoryDataAnalysis.ipynb contains the EDA on all data except for the satellite data.
+- LoadMeetbouten.ipynb contains the loading functions and some preprocessing for the building tacheometry data. It yields a preprocessed csv. This was not further used in the project.
 - Load_satellite.ipynb contains the loading functions, EDA, and preprocessing for the satellite data. It stores three preprocessed csv for horizontal, vertical and hinterland settlemen in the end. - currently unavailable due to confidential data concerns.
-- LoadMeetbouten.ipynb contains the loading functions and some preprocessing for the building tacheometry data. It yields a preprocessed csv.
-- LoadSoil.ipynb contains the loading functions for the soil data, the data is stored in one csv for CPT data and one for Bore data.
-- LoadTacheometry.ipynb contains the loading functions for the quay wall tacheometry data. The data is stored in different formats in different csv's, because of changing my mind on the format. - TO DO: make sure only one format remains and is adjusted everywhere appropriately.
-- prepare_cpt.ipynb contains functions to preprocess the CPT data. It outputs a preprocessed csv, ready for the training notebook. - TO DO: combine with loadSoil.ipynb for better overview.
-- prepare_tcmt.ipynb contains functions to preprocess the tacheometry data. It outputs a preprocessed csv, ready for the training notebook. - TO DO: combine with LoadTacheometry.ipynb for better overview.
+- LoadSoil.ipynb takes input of the XML files obtained through BROLoket: https://www.broloket.nl/ondergrondgegevens. Some minor preprocessing is done. The data is stored in CPT.csv for the CPT data and Bore.csv for the Bore data.
+- LoadTacheometry.ipynb loads the tacheometry data from a map containing csv-files for every rack. These files can be downloaded from AIP: https://aip.amsterdam.nl/surveys/map. Some preprocessing is done. The data is stored in three ways:
+    tacheometry.csv - contains the columns in shape X{i}, Y{i}, Z{i}, initial idea for structure.
+    tacheometry_raw.csv - contains the columns in shape X{date}, Y{date}, Z{date}, for interpolation purposes.
+    tacheometry_vis.csv - only contains the object ids and their coordinate, for visualization purposes.
+- prepare_cpt.ipynb prepares the CPT data to serve as input for the models. The notebook takes input from CPT.csv, outputted by LoadSoil.ipynb. This notebook determines the overlap between the tacheometry and the CPT data, and creates features. It outputs CPT_train_v2.csv.
+- prepare_tcmt.ipynb prepares the tacheometry data to serve as input for the models. The notebook takes input from tacheometry_raw.csv, outputted by LoadTacheometry.ipynb. This notebook mainly removes outliers, aggregates the data per month, and interpolates for missing months. It outputs a csv file for X, Y, and Z.
 - Train.ipynb contains functions to train and validate the models. It also contains the experiments and their results.
-- Evaluation.ipynb contains the functions to test the models. It also contains the results.
+- Evaluation.ipynb contains the functions to test the models. It also contains the results on the test set.
 - ARK validation contains the code to produce the ARK risk category map.
 
 ## Installation
+
+For this project, Python 3.9.7 was used.
 
 1) Clone this repository:
     ```bash
